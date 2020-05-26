@@ -75,8 +75,8 @@ def main():
         history = deque(maxlen=MAX_LEN)
 
         while 1:
-            if select.select([sys.stdin,], [], [], 0.0)[0]:
-                break
+            # if select.select([sys.stdin,], [], [], 0.0)[0]:
+            #     break
             state = getNormalizedIR()
             if state:
                 x, y, size = state

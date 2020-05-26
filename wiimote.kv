@@ -1,0 +1,51 @@
+#:kivy 1.11.1
+
+<WiimoteUI>:
+    GridLayout:
+        cols:1
+        size: root.width, root.height
+
+        BoxLayout:
+            cols: 5
+            size_hint: (1, .1)
+
+            Button:
+	            text:"Connect"
+	            on_release: root.connect()
+
+            Button:
+                text:"Disconnect"
+                on_release: root.disconnect()
+
+            Button:
+	            text:"Calibrate"
+	            on_release: root.calibrate()
+
+            Button:
+                text:"Test Camera"
+                on_release: root.testIR()
+
+            TextInput:
+                on_text: root.updateThreshold(self.text)
+                id: threshold
+                text:"30"
+        
+        
+        Label:
+        	text: root.instruct
+            size_hint: (1, .8)
+
+
+
+        BoxLayout:
+            cols: 3
+            size_hint: (1, .1)
+
+            Label:
+                text:root.status
+
+            Label:
+                text:root.connection
+
+            Label:
+                text:root.battery

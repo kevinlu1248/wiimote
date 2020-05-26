@@ -4,13 +4,10 @@ from typing import List
 
 import cwiid
 
-# import mouse
 import numpy as np
 import pyautogui as gui
 from skimage.transform import ProjectiveTransform
 
-# OUTPUT = subprocess.Popen('xrandr | grep "\*" | cut -d" " -f4',shell=True, stdout=subprocess.PIPE).communicate()[0]
-# SCREENX, SCREENY = map(int, OUTPUT.decode('utf-8').rstrip().split('x'))
 SCREENX, SCREENY = gui.size()
 MX, MY = cwiid.IR_X_MAX, cwiid.IR_Y_MAX
 
@@ -42,7 +39,7 @@ def source_to_projection(src: List, verbose: bool = False):
     # for point in src:
     # print(round(point[0],3), round(point[1], 3))
     src = np.asarray(src)  # bottom_left, top_left, top_right, bottom_right
-    dst = dst = np.asarray([[0, 0], [0, 1], [1, 1], [1, 0]])
+    dst = np.asarray([[0, 0], [0, 1], [1, 1], [1, 0]])
     pt = ProjectiveTransform()
     pt.estimate(src, dst)
     return pt
