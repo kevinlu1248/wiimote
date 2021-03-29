@@ -134,7 +134,7 @@ pycallgraph==1.0.1
 pycrypto==2.6.1
 pycryptodomex==3.4.7
 pycups==1.9.73
-Pygments==2.6.1
+Pygments==2.7.4
 pygobject==3.26.1
 pygtrie==2.3.3
 pyinotify==0.9.6
