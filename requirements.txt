@@ -44,7 +44,7 @@ evdev==0.7.0
 Flask==0.12.2
 Flask-RESTful==0.3.8
 gast==0.2.2
-Glances==2.11.1
+Glances==3.2.1
 google-auth==1.14.1
 google-auth-oauthlib==0.4.1
 google-pasta==0.2.0
