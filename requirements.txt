@@ -15,7 +15,7 @@ bleach==3.1.5
 blinker==1.4
 blis==0.4.1
 botocore==1.8.48
-bottle==0.12.13
+bottle==0.12.20
 Brlapi==0.6.6
 cachetools==4.1.0
 catalogue==1.0.0
